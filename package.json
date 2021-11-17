@@ -1,8 +1,12 @@
 {
   "name": "index",
   "private": "true",
+  "scripts": {
+    "dev": "npx esbuild src/index.tsx --bundle --watch --outdir=dist --jsx-factory=h --jsx-fragment=f",
+    "build": "npx esbuild src/index.tsx --bundle --minify --outdir=dist --jsx-factory=h --jsx-fragment=f"
+  },
   "dependencies": {
-    "vue": "^3.2.2",
-    "vuex": "^4.0.2"
+    "mobx-vue-lite": "^0.2.7",
+    "vue": "^3.2.2"
   }
 }
